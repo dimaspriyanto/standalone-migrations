@@ -8,7 +8,7 @@ if File.directory?('db/migrations')
 end
 
 DB_CONFIG = YAML.load(
-  ERB.new(File.read('db/config.yml')).result
+  ERB.new(File.read('config/database.yml')).result
 ).with_indifferent_access
 
 module Rails
